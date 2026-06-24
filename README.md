@@ -32,26 +32,27 @@ C = SinglyNode(4)
 '''
 
 2.Create connection
-'''python
+
+```python
 head.next = A
 A.next = B
 B.next = C
-'''
+```
 
 WE CAN ALSO TRAVERSE THE LIST (SEE  ALL THE ELEMENTS) WE CAN DO THAT BY POINTING AT THE FIRST CURR TO HEAD SO WE DON'T WANT TO LOSE OUR CONNECTION AND THENA WHILE LOOP  EACH TIME WE UPDATE THE CURR TO THE CURR.NEXT U CAN ALSO USE RECURSION IT IS THE SAME
 
-'''python
+```python
 curr = head
 
 while curr:
   print(curr)
   curr = curr.next
-'''
+```
 
 
 ## display the linked list also time complexity of O(n)
 
-'''python
+```python
 def display(head):
   display = [] # Store the elements here
   curr = head
@@ -61,7 +62,7 @@ def display(head):
   print(' -> '.join(display)) # for a nice representation 
 
 display(Head)
-'''
+```
 
 OUTPUT IS:  1 -> 2 -> 3 -> 4
             ^
@@ -70,7 +71,7 @@ OUTPUT IS:  1 -> 2 -> 3 -> 4
 
 AND BY RECURSION:
 
-'''python
+```python
 def traverse_by_recursion(head):
   if head is None:
     return
@@ -78,13 +79,13 @@ def traverse_by_recursion(head):
   if head.next is not None:
     print(" -> ", end="")
   traverse_by_recursion(head.next)
-'''
+```
 
 ***IT IS THE SAME AS ABOVE***
 
 ## we can also reduce the space complexity in the first display there is another way to do that
 
-'''python
+```python
 def traverse_linked_list(head):
   curr = head
 
@@ -94,7 +95,7 @@ def traverse_linked_list(head):
       print(" -> ", end="")
     curr = curr.next
   print()
-'''
+```
 
 
 
